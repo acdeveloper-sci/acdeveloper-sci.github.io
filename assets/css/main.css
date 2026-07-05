@@ -46,6 +46,18 @@
 }
 .skip-link:focus { top: 0; }
 
+
+/* ── Logo color adaptation per theme ────────────────────────────── */
+[data-theme="dark"] .nav-logo-icon img,
+:root:not([data-theme="light"]) .nav-logo-icon img {
+  filter: brightness(1.6) saturate(0.85);
+  transition: filter 0.3s;
+}
+
+[data-theme="light"] .nav-logo-icon img {
+  filter: none;
+  transition: filter 0.3s;
+}
 /* ── Reset & base ───────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
