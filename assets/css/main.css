@@ -104,6 +104,7 @@
       font-family: 'Space Grotesk', sans-serif;
       letter-spacing: 0.04em; opacity: 0.5;
       transition: border-color 0.2s, color 0.2s;
+      white-space: nowrap;
     }
     .nav-links {
       display: flex; align-items: center; gap: 1.75rem; list-style: none;
@@ -128,6 +129,7 @@
       border: none; border-radius: 8px;
       padding: 7px 16px; cursor: pointer;
       transition: opacity 0.2s;
+      white-space: nowrap;
     }
     .cta-nav:hover { opacity: 0.88; }
     .hamburger { display: none; background: none; border: none; cursor: pointer; color: var(--muted); font-size: 22px; }
@@ -312,6 +314,16 @@
       #hero { padding-top: 120px; }
       .stat-row { gap: 20px; }
     }
+    
+    @media (max-width: 500px) {
+      .theme-btn { display: none; }
+      /* .lang-btn { display: none; } */
+    }
+
+    @media (max-width: 400px) {
+      .lang-btn { display: none; }
+    }
+
 
     /* ── Reduced motion ──────────────────────────────────────── */
     @media (prefers-reduced-motion: reduce) {
