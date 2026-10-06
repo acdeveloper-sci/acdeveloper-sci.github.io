@@ -99,10 +99,10 @@
     .nav-logo-text span { color: var(--accent); }
     .lang-btn {
       background: none; border: 1px solid var(--border);
-      border-radius: 8px; cursor: default; padding: 5px 10px;
+      border-radius: 8px; cursor: pointer; padding: 5px 10px;
       color: var(--muted); font-size: 12px; font-weight: 600;
       font-family: 'Space Grotesk', sans-serif;
-      letter-spacing: 0.04em; opacity: 0.5;
+      letter-spacing: 0.04em;
       transition: border-color 0.2s, color 0.2s;
       white-space: nowrap;
     }
@@ -122,6 +122,7 @@
       transition: border-color 0.2s, color 0.2s;
     }
     .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
     .cta-nav {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 13px; font-weight: 600;

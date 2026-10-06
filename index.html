@@ -31,10 +31,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+  <script src="assets/js/theme-init.js"></script>
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <a href="#services" class="skip-link">Skip to main content</a>
+  <a href="#services" class="skip-link" data-i18n="skip">Skip to main content</a>
 
   <!-- ── Navbar ──────────────────────────────────────────────── -->
   <nav>
@@ -43,16 +44,16 @@
       <span class="nav-logo-text">ac<span>.</span>scicomp</span>
     </a>
     <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="/portfolio_acdeveloper/" rel="noopener noreferrer">Portfolio</a></li>
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="/portfolio_acdeveloper/" target="_blank" rel="noopener noreferrer" data-i18n="nav.portfolio">Portfolio</a></li>
     </ul>
     <div class="nav-right">
-      <button class="lang-btn" title="Language switcher — coming soon" aria-label="Language toggle">EN / ES</button>
+      <button class="lang-btn" id="lang-toggle" aria-label="Change language / Cambiar idioma"><span data-l="en"><b>EN</b></span> / <span data-l="es">ES</span></button>
       <button class="theme-btn" id="theme-toggle" title="Toggle theme" aria-label="Toggle dark/light mode">🌙</button>
-      <a href="https://www.fiverr.com/acardozos" target="_blank" rel="noopener noreferrer" class="cta-nav">Hire me ↗</a>
+      <a href="https://www.fiverr.com/acardozos" target="_blank" rel="noopener noreferrer" class="cta-nav" data-i18n="nav.hire">Hire me ↗</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
   </nav>
@@ -60,22 +61,18 @@
   <!-- ── Hero ────────────────────────────────────────────────── -->
   <section id="hero">
     <div class="hero-tags">
-      <span class="tag tag-a">Scientific Computing</span>
-      <span class="tag tag-a">Computer Vision</span>
+      <span class="tag tag-a" data-i18n="tag.sc">Scientific Computing</span>
+      <span class="tag tag-a" data-i18n="tag.cv">Computer Vision</span>
       <span class="tag tag-b">AI / ML</span>
-      <span class="tag tag-b">GIS &amp; Hydrology</span>
+      <span class="tag tag-b" data-i18n="tag.gis">GIS &amp; Hydrology</span>
       <span class="tag tag-n">Python · OpenCV · TensorFlow</span>
     </div>
     <h1>Adolfo J. Cardozo S.</h1>
     <p class="hero-brand">AC Scientific Computing</p>
-    <p class="hero-sub">
-      Scientific computing engineer and independent researcher with nearly five decades
-      at the intersection of physical science and code.
-      I build tools that make hard problems computable.
-    </p>
+    <p class="hero-sub" data-i18n="hero.sub">Scientific computing engineer and independent researcher with nearly five decades at the intersection of physical science and code. I build tools that make hard problems computable.</p>
     <div class="hero-cta">
-      <a href="https://www.fiverr.com/acardozos" target="_blank" rel="noopener noreferrer" class="btn-primary">Hire me on Fiverr ↗</a>
-      <a href="#projects" class="btn-ghost">View projects</a>
+      <a href="https://www.fiverr.com/acardozos" target="_blank" rel="noopener noreferrer" class="btn-primary" data-i18n="hero.cta1">Hire me on Fiverr ↗</a>
+      <a href="#projects" class="btn-ghost" data-i18n="hero.cta2">View projects</a>
     </div>
     <div class="typewriter-wrap">
       <span class="typewriter-prompt">$</span>
@@ -88,18 +85,15 @@
 
   <!-- ── Services ────────────────────────────────────────────── -->
   <section id="services">
-    <p class="eyebrow">What I do</p>
-    <h2>Services</h2>
-    <p class="services-intro">
-      End-to-end development for scientific and engineering workflows — from
-      raw data and physical models to deployable Python systems.
-    </p>
+    <p class="eyebrow" data-i18n="srv.eyebrow">What I do</p>
+    <h2 data-i18n="srv.title">Services</h2>
+    <p class="services-intro" data-i18n="srv.intro">End-to-end development for scientific and engineering workflows — from raw data and physical models to deployable Python systems.</p>
     <div class="services-grid">
 
       <div class="service-card reveal">
         <span class="service-icon">🌊</span>
-        <h3>Numerical Modeling &amp; Simulation</h3>
-        <p>Integrated process models, stochastic models, and deterministic models, built from physically based equations and validated with real data sets.</p>
+        <h3 data-i18n="srv.1t">Numerical Modeling &amp; Simulation</h3>
+        <p data-i18n="srv.1p">Integrated process models, stochastic models, and deterministic models, built from physically based equations and validated with real data sets.</p>
         <div class="service-tags">
           <span class="stag">HEC-RAS</span>
           <span class="stag">SWMM</span>
@@ -110,8 +104,8 @@
 
       <div class="service-card reveal">
         <span class="service-icon">🗺️</span>
-        <h3>GIS &amp; Spatial Analysis</h3>
-        <p>Spatial data pipelines, watershed delineation, terrain analysis, and custom mapping tools integrating raster and vector layers.</p>
+        <h3 data-i18n="srv.2t">GIS &amp; Spatial Analysis</h3>
+        <p data-i18n="srv.2p">Spatial data pipelines, watershed delineation, terrain analysis, and custom mapping tools integrating raster and vector layers.</p>
         <div class="service-tags">
           <span class="stag">GeoPandas</span>
           <span class="stag">QGIS</span>
@@ -122,8 +116,8 @@
 
       <div class="service-card reveal">
         <span class="service-icon">👁️</span>
-        <h3>Computer Vision</h3>
-        <p>Real-time video analysis, pose estimation, object detection, and custom CV pipelines running on local hardware.</p>
+        <h3 data-i18n="srv.3t">Computer Vision</h3>
+        <p data-i18n="srv.3p">Real-time video analysis, pose estimation, object detection, and custom CV pipelines running on local hardware.</p>
         <div class="service-tags">
           <span class="stag">OpenCV</span>
           <span class="stag">MediaPipe</span>
@@ -134,8 +128,8 @@
 
       <div class="service-card reveal">
         <span class="service-icon">🤖</span>
-        <h3>AI &amp; Machine Learning</h3>
-        <p>Predictive models, data-driven parameter estimation, and AI integrations tailored to scientific and engineering domains.</p>
+        <h3 data-i18n="srv.4t">AI &amp; Machine Learning</h3>
+        <p data-i18n="srv.4p">Predictive models, data-driven parameter estimation, and AI integrations tailored to scientific and engineering domains.</p>
         <div class="service-tags">
           <span class="stag">scikit-learn</span>
           <span class="stag">PyTorch</span>
@@ -146,8 +140,8 @@
 
       <div class="service-card reveal">
         <span class="service-icon">⚙️</span>
-        <h3>Backend APIs &amp; Automation</h3>
-        <p>Python backends, data processing scripts, REST APIs, and automation tools connecting models to real-world inputs and outputs.</p>
+        <h3 data-i18n="srv.5t">Backend APIs &amp; Automation</h3>
+        <p data-i18n="srv.5p">Python backends, data processing scripts, REST APIs, and automation tools connecting models to real-world inputs and outputs.</p>
         <div class="service-tags">
           <span class="stag">FastAPI</span>
           <span class="stag">Flask</span>
@@ -158,8 +152,8 @@
 
       <div class="service-card reveal">
         <span class="service-icon">📊</span>
-        <h3>Data Visualization</h3>
-        <p>Interactive dashboards, spatial maps, and publication-ready figures that communicate complex model outputs clearly.</p>
+        <h3 data-i18n="srv.6t">Data Visualization</h3>
+        <p data-i18n="srv.6p">Interactive dashboards, spatial maps, and publication-ready figures that communicate complex model outputs clearly.</p>
         <div class="service-tags">
           <span class="stag">Matplotlib</span>
           <span class="stag">Plotly</span>
@@ -170,8 +164,8 @@
 
       <div class="service-card reveal">
         <span class="service-icon">🔧</span>
-        <h3>Legacy Code Modernization</h3>
-        <p>Refactoring and modernizing scientific codebases in Fortran, C/C++, and legacy Python. Migration to modern architectures, REST APIs, and deployable libraries without losing numerical fidelity.</p>
+        <h3 data-i18n="srv.7t">Legacy Code Modernization</h3>
+        <p data-i18n="srv.7p">Refactoring and modernizing scientific codebases in Fortran, C/C++, and legacy Python. Migration to modern architectures, REST APIs, and deployable libraries without losing numerical fidelity.</p>
         <div class="service-tags">
           <span class="stag">Fortran</span>
           <span class="stag">C/C++</span>
@@ -188,18 +182,18 @@
 
   <!-- ── Projects ─────────────────────────────────────────────── -->
   <section id="projects">
-    <p class="eyebrow">Open source &amp; demos</p>
-    <h2>Projects</h2>
+    <p class="eyebrow" data-i18n="proj.eyebrow">Open source &amp; demos</p>
+    <h2 data-i18n="proj.title">Projects</h2>
     <p class="projects-intro">
-      A selection of public work. More repositories on
+      <span data-i18n="proj.intro">A selection of public work. More repositories on</span>
       <a href="https://github.com/acdeveloper-sci" target="_blank" rel="noopener noreferrer">GitHub</a>.
     </p>
     <div class="projects-grid">
 
       <div class="project-card reveal">
-        <p class="project-meta">Python · Open Source · PyPI</p>
+        <p class="project-meta" data-i18n="proj.1meta">Python · Open Source · PyPI</p>
         <h3>acfortformat</h3>
-        <p>Fortran source code formatter for scientific and engineering codebases. Available on PyPI for direct installation.</p>
+        <p data-i18n="proj.1p">Fortran source code formatter for scientific and engineering codebases. Available on PyPI for direct installation.</p>
         <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;">
           <a href="https://github.com/acdeveloper-sci/acfortformat" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a>
           <a href="https://pypi.org/project/acfortformat/" target="_blank" rel="noopener noreferrer" class="project-link" style="color:var(--accent2);">PyPI →</a>
@@ -207,18 +201,18 @@
       </div>
 
       <div class="project-card reveal">
-        <p class="project-meta">Python · Open Source · In review</p>
+        <p class="project-meta" data-i18n="proj.2meta">Python · Open Source · In review</p>
         <h3>envscout</h3>
-        <p>Environment inspection and dependency analysis tool for Python projects. Currently in active development.</p>
+        <p data-i18n="proj.2p">Environment inspection and dependency analysis tool for Python projects. Currently in active development.</p>
         <a href="https://github.com/acdeveloper-sci/envscout" target="_blank" rel="noopener noreferrer" class="project-link">
           GitHub →
         </a>
       </div>
 
       <div class="project-card reveal">
-        <p class="project-meta">Game · JavaScript · Live</p>
+        <p class="project-meta" data-i18n="proj.3meta">Game · JavaScript · Live</p>
         <h3>Snake Game</h3>
-        <p>Classic Snake implemented as a standalone browser game. Lightweight, no dependencies, deployed on a custom subdomain.</p>
+        <p data-i18n="proj.3p">Classic Snake implemented as a standalone browser game. Lightweight, no dependencies, deployed on a custom subdomain.</p>
         <a href="https://snake-game.acscicomp.com" target="_blank" rel="noopener noreferrer" class="project-link">
           Live demo →
         </a>
@@ -226,7 +220,7 @@
 
     </div>
     <div style="text-align:center;margin-top:2rem;">
-      <a href="/portfolio_acdeveloper/" rel="noopener noreferrer" class="btn-ghost">View full open source portfolio →</a>
+      <a href="/portfolio_acdeveloper/" target="_blank" rel="noopener noreferrer" class="btn-ghost" data-i18n="proj.portfolio">View full open source portfolio →</a>
     </div>
   </section>
 
@@ -234,51 +228,39 @@
 
   <!-- ── About ────────────────────────────────────────────────── -->
   <section id="about">
-    <p class="eyebrow">Background</p>
-    <h2>About</h2>
+    <p class="eyebrow" data-i18n="about.eyebrow">Background</p>
+    <h2 data-i18n="about.title">About</h2>
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          I'm a civil engineer, doctoral researcher, and freelance consultant based in Colombia,
-          with nearly five decades of continuous work at the intersection of physical science
-          and code. I'm not an engineer who learned to program, nor a programmer who knows
-          some hydraulics — I've developed mathematical models of cohesive sediment transport
-          <em>and</em> implemented them in high-performance Fortran <em>and</em> run them on
-          HPC clusters. That depth on both sides is genuinely rare.
+          <span data-i18n="about.p1">I'm a civil engineer, doctoral researcher, and freelance consultant based in Colombia, with nearly five decades of continuous work at the intersection of physical science and code. I'm not an engineer who learned to program, nor a programmer who knows some hydraulics — I've developed mathematical models of cohesive sediment transport <em>and</em> implemented them in high-performance Fortran <em>and</em> run them on HPC clusters. That depth on both sides is genuinely rare.</span>
         </p>
         <p>
-          Over time I've expanded into computer vision, AI-assisted data analysis,
-          legacy code modernization, and backend Python development. I work in English
-          and Spanish, taking on one to three concurrent projects at a time so
-          every client gets real attention.
+          <span data-i18n="about.p2">Over time I've expanded into computer vision, AI-assisted data analysis, legacy code modernization, and backend Python development. I work in English and Spanish, taking on one to three concurrent projects at a time so every client gets real attention.</span>
         </p>
         <p>
-          I treat ambiguity as a professional liability: I scope carefully, communicate
-          clearly about complexity and limitations from the start, and only commit to
-          what I can deliver well.
+          <span data-i18n="about.p3">I treat ambiguity as a professional liability: I scope carefully, communicate clearly about complexity and limitations from the start, and only commit to what I can deliver well.</span>
         </p>
         <p>
-          IAHR member since 2010. Active peer reviewer for the
-          <em>Journal of Hydroinformatics</em> (IWA Publishing / IAHR).
-          NVIDIA Developer Program member since 2019.
+          <span data-i18n="about.p4">IAHR member since 2010. Active peer reviewer for the <em>Journal of Hydroinformatics</em> (IWA Publishing / IAHR). NVIDIA Developer Program member since 2019.</span>
         </p>
         <div class="stat-row">
           <div class="stat">
             <span class="stat-num">~5</span>
-            <span class="stat-label">Decades of practice</span>
+            <span class="stat-label" data-i18n="about.stat1">Decades of practice</span>
           </div>
           <div class="stat">
             <span class="stat-num">EN/ES</span>
-            <span class="stat-label">Bilingual</span>
+            <span class="stat-label" data-i18n="about.stat2">Bilingual</span>
           </div>
           <div class="stat">
             <span class="stat-num">1–3</span>
-            <span class="stat-label">Projects at a time</span>
+            <span class="stat-label" data-i18n="about.stat3">Projects at a time</span>
           </div>
         </div>
       </div>
       <div class="reveal">
-        <p class="stack-label">Core stack</p>
+        <p class="stack-label" data-i18n="about.stack">Core stack</p>
         <ul class="stack-list">
           <li><span class="stack-dot"></span><div><strong>Python</strong> — scientific computing, CV, APIs</div></li>
           <li><span class="stack-dot"></span><div><strong>OpenCV / MediaPipe</strong> — computer vision pipelines</div></li>
@@ -297,18 +279,15 @@
 
   <!-- ── Contact ───────────────────────────────────────────────── -->
   <section id="contact">
-    <p class="eyebrow">Get in touch</p>
-    <h2>Let's work together</h2>
-    <p class="contact-sub">
-      Have a project in mind? I'm available for freelance work.
-      Reach out on Fiverr or directly by email.
-    </p>
+    <p class="eyebrow" data-i18n="c.eyebrow">Get in touch</p>
+    <h2 data-i18n="c.title">Let's work together</h2>
+    <p class="contact-sub" data-i18n="c.sub">Have a project in mind? I'm available for freelance work. Reach out on Fiverr or directly by email.</p>
     <div class="contact-options">
       <a href="https://www.fiverr.com/acardozos" target="_blank" rel="noopener noreferrer" class="contact-card">
         <span class="contact-icon">💼</span>
         <div class="contact-info">
-          <strong>Fiverr</strong>
-          <span>Hire me for a project</span>
+          <strong data-i18n="c.fiverr.title">Fiverr</strong>
+          <span data-i18n="c.fiverr.sub">Hire me for a project</span>
         </div>
       </a>
       <a href="https://co.linkedin.com/in/acardozos" target="_blank" rel="noopener noreferrer" class="contact-card">
@@ -328,7 +307,7 @@
       <a href="mailto:acardozos@acscicomp.com" class="contact-card">
         <span class="contact-icon">✉️</span>
         <div class="contact-info">
-          <strong>Email</strong>
+          <strong data-i18n="c.email">Email</strong>
           <span>acardozos@acscicomp.com</span>
         </div>
       </a>
@@ -339,12 +318,12 @@
   <footer>
     <span>
       © 2026 acscicomp.com &nbsp;·&nbsp;
-      <a href="https://acscicomp.com" rel="noopener noreferrer" style="font-size:11px;color:var(--muted);">Logo original de Adolfo J. Cardozo S.</a>
+      <a href="https://acscicomp.com" target="_blank" rel="noopener noreferrer" style="font-size:11px;color:var(--muted);">Logo original de Adolfo J. Cardozo S.</a>
     </span>
     <span>
       <a href="https://github.com/acdeveloper-sci" target="_blank" rel="noopener noreferrer">GitHub</a>
       &nbsp;·&nbsp;
-      <a href="#hero">Back to top ↑</a>
+      <a href="#hero" data-i18n="footer.top">Back to top ↑</a>
     </span>
   </footer>
 
