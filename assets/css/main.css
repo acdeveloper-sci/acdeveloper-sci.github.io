@@ -123,6 +123,7 @@
     }
     .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
     .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .lang-btn b { color: var(--accent); font-weight: 700;}
     .cta-nav {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 13px; font-weight: 600;
